@@ -30,15 +30,7 @@ module.exports = {
         results.push(newResult);
         pubsub.publish(FV_CREATED, { resultCreated: newResult });
         return newResult;
-      }, 15 * 60 * 1000);
+      }, 0.2 * 60 * 1000);
     },
   },
 };
-
-// setInterval(() => {
-//   pubsub.publish(FV_CREATED, {
-//     resultCreated: { id, fairValue: Math.random() },
-//   });
-
-//   id++;
-// }, 3000);

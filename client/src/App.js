@@ -1,9 +1,9 @@
 import React from 'react';
 import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
+import { useQuery, useMutation } from '@apollo/react-hooks';
 
 const GET_RESULTS = gql`
-  query {
+  {
     results {
       id
       fairValue
@@ -20,26 +20,34 @@ const RESULTS_CREATED = gql`
   }
 `;
 
-const App = () => (
-  <Query query={GET_RESULTS}>
-    {({ data, loading, subscribeToMore }) => {
-      if (!data) {
-        return null;
-      }
+const ADD_RESULT = gql`
+  mutation {
+    addResult {
+      id
+      fairValue
+    }
+  }
+`;
 
-      if (loading) {
-        return <span>Loading ...</span>;
-      }
+function Results() {
+  const { data, loading, subscribeToMore } = useQuery(GET_RESULTS);
 
-      return (
-        <DisplayResults
-          results={data.results}
-          subscribeToMore={subscribeToMore}
-        />
-      );
-    }}
-  </Query>
-);
+  if (loading) return <span>Loading ...</span>;
+
+  return (
+    <>
+      <GetResults />
+      <DisplayResults
+        results={data.results}
+        subscribeToMore={subscribeToMore}
+      />
+    </>
+  );
+}
+
+function App() {
+  return <Results />;
+}
 
 class DisplayResults extends React.Component {
   componentDidMount() {
@@ -67,6 +75,24 @@ class DisplayResults extends React.Component {
       </ul>
     );
   }
+}
+
+function GetResults() {
+  const [addResult, { data }] = useMutation(ADD_RESULT, {
+    onCompleted: () => {
+      console.log('Finished mutation');
+    },
+  });
+  return (
+    <input
+      type="button"
+      value="Get Result!"
+      onClick={() => {
+        addResult();
+        console.log('Clicked!');
+      }}
+    />
+  );
 }
 
 export default App;
