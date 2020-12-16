@@ -15,7 +15,7 @@
     "apollo-server-express": "^2.19.0",
     "cors": "^2.8.4",
     "express": "^4.16.4",
-    "graphql": "^14.0.2",
+    "graphql": "^14.7.0",
     "subscriptions-transport-ws": "^0.9.15"
   },
   "devDependencies": {
