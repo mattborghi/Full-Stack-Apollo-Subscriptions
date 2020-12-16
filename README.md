@@ -1,26 +1,33 @@
-# fullstack-apollo-subscription-example
+# Full Stack Apollo subscription
 
-A minimal Apollo Server 2 with Apollo Client 2 application with subscriptions.
+A minimal Apollo Server with Apollo Client application using subscriptions.
 
 ## Installation
 
-* `git clone git@github.com:the-road-to-graphql/fullstack-apollo-subscription-example.git`
-* `cd fullstack-apollo-subscription-example`
+```sh
+git clone git@github.com:mattborghi/Full-Stack-Apollo-Subscriptions.git
+cd into the folder
+```
 
 ### Server
 
-* `cd server`
-* `npm install`
-* `npm start`
+```sh
+cd server
+npm install
+npm start
+```
 
 ### Client
 
-* `cd client`
-* `npm install`
-* `npm start`
-* visit `http://localhost:3000`
+```sh
+cd client
+npm install
+npm start
+```
 
-## Want to learn more about React + GraphQL + Apollo?
+Visit `http://localhost:3000`
+
+## Bibliography
 
 * Don't miss [upcoming Tutorials and Courses](https://www.getrevue.co/profile/rwieruch)
 * Check out current [React Courses](https://roadtoreact.com)
