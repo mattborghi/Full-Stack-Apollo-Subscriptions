@@ -16,7 +16,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "graphql": "^14.7.0",
-    "subscriptions-transport-ws": "^0.9.15"
+    "subscriptions-transport-ws": "^0.9.18"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
