@@ -11,7 +11,7 @@
     "apollo-link-ws": "^1.0.20",
     "bull": "^3.20.0",
     "graphql": "^14.7.0",
-    "graphql-tag": "^2.10.1",
+    "graphql-tag": "^2.11.0",
     "react": "^16.14.0",
     "react-apollo": "^3.0.0",
     "react-dom": "^16.9.0",
