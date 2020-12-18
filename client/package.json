@@ -5,7 +5,7 @@
   "dependencies": {
     "@apollo/client": "^3.3.6",
     "apollo-client": "^2.6.4",
-    "apollo-link": "^1.2.12",
+    "apollo-link": "^1.2.14",
     "graphql": "^14.7.0",
     "react": "^16.14.0",
     "react-dom": "^16.9.0",
