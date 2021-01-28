@@ -11,17 +11,17 @@
   "author": "“Robin <rwieruch@fastmail.com> (https://www.robinwieruch.de)",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^2.19.0",
-    "apollo-server-express": "^2.19.0",
+    "apollo-server": "^2.19.2",
+    "apollo-server-express": "^2.19.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "graphql": "^14.7.0",
+    "graphql": "^15.5.0",
     "subscriptions-transport-ws": "^0.9.18"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.7"
   }
 }
